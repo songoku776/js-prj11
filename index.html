@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async and Await Example</title>
+</head>
+<body>
+    <div id="res">Waiting for result...</div>
+    <script>
+        async function fetchData() {
+            return "Data retrieved successfully";
+        }
+
+        async function processData() {
+            const result = await fetchData();
+            document.getElementById("res").innerHTML = `Processed: ${result}`;
+        }
+
+        processData();
+    </script>
+</body>
+</html>
